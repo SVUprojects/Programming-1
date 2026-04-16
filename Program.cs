@@ -32,9 +32,7 @@ else
     Console.WriteLine($"Last Name: {lastName}");
     Console.WriteLine($"ID: {id}");
 
-    // display the user full name and ID but do not duplicate any charecters
-    // like if the user enters "noor juor 12345", the output should be "noorjo12345"
-    // use for loop
+    // display the player information without duplicates
     Console.WriteLine("\nPlayer Information without duplicates:");
     string fullNameAndID = firstName + lastName + id;
     string result = "";
