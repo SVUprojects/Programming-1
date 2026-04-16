@@ -28,7 +28,22 @@ else
 
     // display the player information
     Console.WriteLine("\nPlayer Information:");
-    Console.WriteLine("First Name: {0}", firstName);
-    Console.WriteLine("Last Name: {0}", lastName);
-    Console.WriteLine("ID: {0}", id);
+    Console.WriteLine($"First Name: {firstName}");
+    Console.WriteLine($"Last Name: {lastName}");
+    Console.WriteLine($"ID: {id}");
+
+    // display the user full name and ID but do not duplicate any charecters
+    // like if the user enters "noor juor 12345", the output should be "noorjo12345"
+    // use for loop
+    Console.WriteLine("\nPlayer Information without duplicates:");
+    string fullNameAndID = firstName + lastName + id;
+    string result = "";
+    for (int i = 0; i < fullNameAndID.Length; i++)
+    {
+        if (!result.Contains(fullNameAndID[i]))
+        {
+            result += fullNameAndID[i];
+        }
+    }
+    Console.WriteLine($"Full Name and ID (unique characters only): {result}");
 }
